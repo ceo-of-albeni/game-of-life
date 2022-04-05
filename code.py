@@ -98,4 +98,3 @@ f = Potop(c, 40, 40, 800, 800)
 f.printing()
 
 root.mainloop()
-
