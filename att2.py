@@ -1,5 +1,4 @@
 from tkinter import *
-# from time import sleep
 from random import randint
 
  
@@ -85,7 +84,7 @@ class Potop:
                 elif (self.cell[i][j] == 3):
                     color = "lightseagreen"
                 elif (self.cell[i][j] == 4):
-                    color = "brown"
+                    color = "peachpuff4"
                 else:
                     color = "darkseagreen1"
                 self.c.create_rectangle((i-1) * sizer, (j-1) * sizecl, (i) * sizer, (j) * sizecl, fill=color)
