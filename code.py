@@ -12,7 +12,7 @@ class Potop:
         self.width = width
         self.height = height
         self.count = 0
-        s = randint(10, 40)
+        s = randint(10, 50)
         for i in range(self.r):
             self.cell.append([])
             for j in range(self.cl):
@@ -38,6 +38,8 @@ class Potop:
         self.cell[s][s] = 3
         self.cell[s][s] = 3
         # mythical creatures
+        self.cell[s][s] = 5
+        # sun
 
         self.paint()
 
@@ -55,22 +57,35 @@ class Potop:
                     sc[i][j] = 0
                 elif n > 3:
                     sc[i][j] = 2
-                    sc[20][20] = 4
-                    sc[19][20] = 4
+                    sc[25][25] = 4
+                    sc[24][25] = 4
                 elif n == 2:
                     sc[i][j] = 3
                 elif n == 3:
                     sc[i][j] = 1
+                    sc[45][5] = 5
                 else:
                     sc[i][j] = self.cell[i][j]
 
         self.cell = sc
 
-    def printing(self):
+    def show(self):
         for i in range(self.r):
             for j in range(self.cl):
                 print(self.cell[i][j], end="")
             print()
+
+    def sun(self):
+            color = "white"
+            z = self.width // (self.r - 2)
+            scl = self.height // (self.cl - 2)
+            for i in range(1, self.r - 1):
+                for j in range(1, self.cl - 1):
+                    if (self.cell[i][j] == 5):
+                        color = "white"
+                    self.c.create_circle((i-1)*z, (j-1)*scl, (i)*z, (j)*scl)
+            self.animate()
+            self.c.after(100, self.paint)
 
     def paint(self):
         szr = self.width // (self.r - 2)
@@ -97,7 +112,7 @@ root.geometry("800x800")
 c = Canvas(root, width=800, height=800)
 c.pack()
 
-f = Potop(c, 40, 40, 800, 800)
-f.printing()
+f = Potop(c, 50, 50, 800, 800)
+f.show()
 
 root.mainloop()
