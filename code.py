@@ -1,5 +1,6 @@
 from tkinter import *
 from random import randint
+from time import sleep
 
 
 class Potop:
@@ -11,6 +12,7 @@ class Potop:
         self.width = width
         self.height = height
         self.count = 0
+        s = randint(10, 40)
         for i in range(self.r):
             self.cell.append([])
             for j in range(self.cl):
@@ -19,27 +21,27 @@ class Potop:
         self.cell[i][j] = 4
         self.cell[i][j] = 4
         # noev covcheg
-        self.cell[randint(10, 40)][randint(10, 40)] = 1
-        self.cell[randint(10, 40)][randint(10, 40)] = 1
-        self.cell[randint(10, 40)][randint(10, 40)] = 1
-        self.cell[randint(10, 40)][randint(10, 40)] = 1
-        self.cell[randint(10, 40)][randint(10, 40)] = 1
+        self.cell[s][s] = 1
+        self.cell[s][s] = 1
+        self.cell[s][s] = 1
+        self.cell[s][s] = 1
+        self.cell[s][s] = 1
         # my creativity while doing this
-        self.cell[randint(10, 40)][randint(10, 40)] = 2
-        self.cell[randint(10, 40)][randint(10, 40)] = 2
-        self.cell[randint(10, 40)][randint(10, 40)] = 2
-        self.cell[randint(10, 40)][randint(10, 40)] = 2
+        self.cell[s][s] = 2
+        self.cell[s][s] = 2
+        self.cell[s][s] = 2
+        self.cell[s][s] = 2
         # great flood
-        self.cell[randint(10, 40)][randint(10, 40)] = 3
-        self.cell[randint(10, 40)][randint(10, 40)] = 3
-        self.cell[randint(10, 40)][randint(10, 40)] = 3
-        self.cell[randint(10, 40)][randint(10, 40)] = 3
-        self.cell[randint(10, 40)][randint(10, 40)] = 3
+        self.cell[s][s] = 3
+        self.cell[s][s] = 3
+        self.cell[s][s] = 3
+        self.cell[s][s] = 3
+        self.cell[s][s] = 3
         # mythical creatures
 
-        self.draw()
+        self.paint()
 
-    def step(self):
+    def animate(self):
         sc = []
         for i in range(self.r):
             sc.append([])
@@ -70,7 +72,7 @@ class Potop:
                 print(self.cell[i][j], end="")
             print()
 
-    def draw(self):
+    def paint(self):
         szr = self.width // (self.r - 2)
         scl = self.height // (self.cl - 2)
         for i in range(1, self.r - 1):
@@ -86,8 +88,9 @@ class Potop:
                 else:
                     color = "darkseagreen1"
                 self.c.create_rectangle((i-1)*szr, (j-1)*scl, (i)*szr, (j)*scl, fill=color)
-        self.step()
-        self.c.after(100, self.draw)
+        sleep(0.1)
+        self.animate()
+        self.c.after(100, self.paint)
 
 root = Tk()
 root.geometry("800x800")
