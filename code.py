@@ -39,7 +39,7 @@ class Potop:
         self.cell[s][s] = 3
         # mythical creatures
         self.cell[s][s] = 5
-        # observer
+        # God
 
         self.paint()
 
@@ -75,7 +75,7 @@ class Potop:
                 print(self.cell[i][j], end="")
             print()
 
-    def observer(self):
+    def god(self):
             color = "white"
             z = self.width // (self.r - 2)
             scl = self.height // (self.cl - 2)
