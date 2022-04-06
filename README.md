@@ -9,10 +9,13 @@ Blue cells: water/flood.
 
 Brown cells: Noah's ark.
 
+White cell: God whatching what he did and then leaving.
+
 Pink and dark-green cells: mythical/legendary creatures. 
 
 # Screenshots
-<img width="340" alt="Снимок экрана 2022-04-05 в 20 16 56" src="https://user-images.githubusercontent.com/101452567/161774749-0a7a38d6-6357-4693-944b-962eeee69011.png">
+<img width="370" alt="Снимок экрана 2022-04-06 в 21 37 21" src="https://user-images.githubusercontent.com/101452567/162014373-4496c0d1-4f65-4c32-a061-4858e0f068dc.png">
 
-<img width="340" alt="Снимок экрана 2022-04-05 в 21 01 46" src="https://user-images.githubusercontent.com/101452567/161784417-8e154aa9-83a6-448d-8050-2a87cb35c433.png">
+<img width="370" alt="Снимок экрана 2022-04-06 в 21 37 44" src="https://user-images.githubusercontent.com/101452567/162014412-2423a736-540d-4018-9f77-52776c39c3c5.png">
+
 (end of simulation)
