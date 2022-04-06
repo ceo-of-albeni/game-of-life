@@ -39,7 +39,7 @@ class Potop:
         self.cell[s][s] = 3
         # mythical creatures
         self.cell[s][s] = 5
-        # sun
+        # observer
 
         self.paint()
 
@@ -75,7 +75,7 @@ class Potop:
                 print(self.cell[i][j], end="")
             print()
 
-    def sun(self):
+    def observer(self):
             color = "white"
             z = self.width // (self.r - 2)
             scl = self.height // (self.cl - 2)
@@ -100,10 +100,12 @@ class Potop:
                     color = "lightseagreen"
                 elif (self.cell[i][j] == 4):
                     color = "peachpuff4"
+                elif (self.cell[i][j] == 5):
+                    color = "white"
                 else:
                     color = "darkseagreen1"
                 self.c.create_rectangle((i-1)*szr, (j-1)*scl, (i)*szr, (j)*scl, fill=color)
-        sleep(0.1)
+        sleep(0.4)
         self.animate()
         self.c.after(100, self.paint)
 
@@ -112,7 +114,7 @@ root.geometry("800x800")
 c = Canvas(root, width=800, height=800)
 c.pack()
 
-f = Potop(c, 50, 50, 800, 800)
-f.show()
+p = Potop(c, 50, 50, 800, 800)
+p.show()
 
 root.mainloop()
